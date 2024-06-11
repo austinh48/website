@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!-- [if IE 8]>         <html class="no-js lt-ie9"> <![endif] -->
+
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- tab description -->
+        <!-- chrome tab description -->
         <title>Austin Hodges</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
         <style>
             body, html {
                 height: 100%;
@@ -18,12 +13,68 @@
                 display: flex;
                 flex-direction: column;
             }
+
             h1 {
                 text-align: center;
             }
 
+            .dropdown-container {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 30px;
+                padding-right: 30px;
+            }
+
+            .dropdown-menu {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-button {
+                color: black;
+                background-color: white;
+                padding: 10px 20px;
+                font-size: 12px;
+                cursor: pointer;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 50px;
+                border: 1px solid black;
+                border-radius: 5px;
+                z-index: 1;
+                right: 0;
+                /* box-shadow: ; */
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: lightgray;
+            }
+
+            .dropdown-menu:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-menu:hover .dropdown-button {
+                background-color: lightgray;
+            }
+
             .about-me {
                 flex: 1;
+                padding: 30px;
             }
 
             .about-me h3 {
@@ -39,10 +90,23 @@
                 margin-top: auto;
                 margin-bottom: 50px;
             }
+
         </style>
     </head>
     <body>
         <h1>Austin Hodges</h1>
+
+        <div class="dropdown-container">
+            <div class="dropdown-menu">
+                <button class="dropdown-button">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                </div>
+            </div>
+        </div>
+
         <div class="about-me">
             <h3>About Me</h3>
             <p class="about-me-main">
@@ -60,7 +124,8 @@
                 most experience in (both professional and throughout my academic career) is git. In addition to these technical skills, I have acquired other skills throughout 
                 my professional and academic careers, such as: great communication skills, leadership skills, teamwork, project planning/management and time management. 
                 I would like to point out that my time management skills are excellent as I worked at my internship part time during my senior year of my undergraduate degree 
-                as well as working full time while getting my Master's degree and performing very well, which shows that I know how to create a schedule and manage my time accordingly.
+                as well as working full time while getting my Master's degree and performing very well, which shows that I know how to create a schedule and manage my time accordingly. 
+                I am someone who is very eager to learn, and really enjoys learning new skills/coding languages. I love a challenge!
             </p>
             <p class="about-me-thanks">
                 Thank you for taking the time to read my introduction. Feel free to explore other parts of the website and don't hesitate to reach out with any questions/comments!!

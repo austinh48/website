@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- chrome tab description -->
+        <title>Projects</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .dropdown-container {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 30px;
+                padding-right: 30px;
+            }
+
+            .dropdown-menu {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-button {
+                color: black;
+                background-color: white;
+                padding: 10px 20px;
+                font-size: 12px;
+                cursor: pointer;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 50px;
+                border: 1px solid black;
+                border-radius: 5px;
+                z-index: 1;
+                right: 0;
+                /* box-shadow: ; */
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: lightgray;
+            }
+
+            .dropdown-menu:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-menu:hover .dropdown-button {
+                background-color: lightgray;
+            }
+
+            /* insert formatting for page here */
+
+            footer {
+                text-align: center;
+                margin-top: auto;
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Austin Hodges</h1>
+
+        <div class="dropdown-container">
+            <div class="dropdown-menu">
+                <button class="dropdown-button">Menu</button>
+                <div class="dropdown-content">
+                    <a href="homepage.html">Home</a>
+                    <a href="education.html">Education</a>
+                    <a href="projects.html">Projects</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects">
+            <h2>Projects</h2>
+            <p class="work-projects">
+                In my professional career thus far I have worked on 2 teams and coded 3 projects. These projects involved developing utilizing an agile SDLC, with daily scrums, 
+                2 week sprints, story points, etc. Throughout the process, I have utilized many different libraries across Python, but the main focus for 2 of these projects 
+                was RPA, and replacing licensed bots from Automation Anywhere. The other project that I have coded utilized mainly bash scripts with a little bit of Python to 
+                automate an upgrading process for our teams digital ledgers.
+            </p>
+            <h4>Zinnia</h4>
+            <p>
+                The most recent project that I have worked on is an automation process for upgrading DAML digital ledgers from an old version (0.0.1 for example) to the new version 
+                (0.0.2). This project took place over the span of several months where I developed multiple bash scripts (~25) as well as python scripts to aid in the upgrading 
+                process. The process of developing this project was particularly challenging because the tool that we were using (provided to us by Digital Asset) was in the first 
+                stages of its development, so I ran into bugs continuously while using the tool. However, this gave me an opportunity to experience how the feedback process works 
+                when creating a tool like this. I was in constant communication with someone from Digital Asset (DA) whenever I encountered an error, and was able to give valuable 
+                feedback to the DA team so that they could fix the bug, and send me a new version of the tool. Another challenge that I encountered during this project was the fact 
+                that I had never used Bash before, so I had to learn the syntax as I was coding the functionality. This proved to be a fun challenge, because I was able to apply my 
+                knowledge of other coding languages and through use of Google, translate the code that I wanted to write into Bash. After all the bash scripts were complete, we wanted 
+                to make it so anyone within the team could run the upgrade without needing to clone the repository that I created. In order to achieve this, I utilized Azure Devops to 
+                create a pipeline that would call all of the scripts in the right order. This also proved to be challenging for me because I had never used Azure Pipelines in the past.
+            </p>
+
+        </div>
+
+        <footer>
+            Email: austin.hodges48@yahoo.com  |  Phone: (609) 495-7503  |  LinkedIn: www.linkedin.com/in/austin-hodges48 (make this a clickable link)
+        </footer>
+    </body>
+</html>

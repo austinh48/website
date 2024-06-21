@@ -18,6 +18,7 @@
                 text-align: center;
             }
 
+            /* dropdown start */
             .dropdown-container {
                 position: relative;
                 display: flex;
@@ -71,8 +72,26 @@
             .dropdown-menu:hover .dropdown-button {
                 background-color: lightgray;
             }
+            /* dropdown end */
 
             /* insert formatting for page here */
+
+            .projects {
+                flex: 1;
+                padding: 30px;
+            }
+
+            .projects h2 {
+                text-align: center;
+            }
+
+            .projects .work-projects,.daml-upgrade,.rpa {
+                text-indent: 25px;
+            }
+
+            .projects h4 {
+                text-align: center;
+            }
 
             footer {
                 text-align: center;
@@ -104,7 +123,7 @@
                 automate an upgrading process for our teams digital ledgers.
             </p>
             <h4>Zinnia</h4>
-            <p>
+            <p class="daml-upgrade">
                 The most recent project that I have worked on is an automation process for upgrading DAML digital ledgers from an old version (0.0.1 for example) to the new version 
                 (0.0.2). This project took place over the span of several months where I developed multiple bash scripts (~25) as well as python scripts to aid in the upgrading 
                 process. The process of developing this project was particularly challenging because the tool that we were using (provided to us by Digital Asset) was in the first 
@@ -115,6 +134,22 @@
                 knowledge of other coding languages and through use of Google, translate the code that I wanted to write into Bash. After all the bash scripts were complete, we wanted 
                 to make it so anyone within the team could run the upgrade without needing to clone the repository that I created. In order to achieve this, I utilized Azure Devops to 
                 create a pipeline that would call all of the scripts in the right order. This also proved to be challenging for me because I had never used Azure Pipelines in the past.
+            </p>
+            <p class="rpa">
+                The projects I worked on during my internship at Zinnia were both similar projects for the RPA team. I had to create 2 python scripts (1 for each website I had to scrape) 
+                that utilized Selenium to open up google chrome, enter the url for the website and login, then navigate through different tabs and screens and take screenshots for of the 
+                page. These projects were particularly challenging because it was my first time really using Python and its libraries for something complex. The scripts were used internally 
+                to replace the Automation Anywhere bots that Zinnia had previously been purchasing licenses for at a price of about $20,000 per yer per bot (the redesign I did saved the team 
+                about $40,000 per year). These scripts also ran about 50% faster than the Automation Anywhere scripts, so not only did the redesign save money, but it also saved time. Another 
+                thing that made these projects so challenging was that the pages that were needed to be screen-shotted were not the same each time, and depended on an excel sheet that was submitted. 
+                I had to use pandas to read the excel sheet and for each row (some excel sheets were over 100 rows) and determine which screenshots to take for each contract number. 
+                For each website, I had to code around 20 functions (I don't remember the exact number) that would be able to navigate to a page based on the option that 
+                was selected in the excel sheet and take the corresponding screenshot, and then I had to create the required ~10 workflows that would call specific functions within them. I also 
+                had to include the option to select each one of the pages individually, in addition to the pre-selected flows without duplicates. Another particularly tough challenge that I ran into 
+                was that one of the websites would constantly change the xpaths of the objects on the webpage (I didn't want to use xpaths for this reason, but there was no other option). In order to 
+                overcome this, I had to continuously test until I found the range of values that an objects xpaths would be, and create try/except statements paired with if/else in order to screenshot 
+                the right pages. Overall, both of these projects were about 5000 LOC, all custom code. I found these projects to be a fun yet challenging experience that really helped me understand 
+                how complex programming can be. 
             </p>
 
         </div>
